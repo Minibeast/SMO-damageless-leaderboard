@@ -1,0 +1,15 @@
+{
+    "times": [
+        { "id": "meo5d89z", "time": "9:42:40", "place": 1 },
+        { "id": "yd5xp3wm", "time": "10:38:34", "place": 2 },
+        { "id": "z5d74pjm", "time": "13:47:01", "place": 3 },
+        { "id": "z15401gy", "time": "15:07:54", "place": 4 },
+        { "id": "mkgxvp3y", "time": "24:18:34", "place": 5 }
+    ],
+    "variables": [
+        { "id": "jq6xp6oq", "value": "1.3.0" },
+        { "id": "z194ykjl", "value": "1.2.0" },
+        { "id": "klrz49w1", "value": "1.1.0" },
+        { "id": "814xgjwq", "value": "1.0.0" }
+    ]
+}

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SMO - Damageless</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+    <meta property="og:title" content="SMO - Damageless" />
+    <meta property="og:type" content="website" />
+    <meta property="og:description" content="Damageless Leaderboard sourced from Speedrun.com" />
+
+    <meta property="og:locale" content="en_US" />
+</head>
+
+<body>
+    <h1>Damageless</h1>
+    <h2 class="reduceTopMargin">Leaderboard</h2>
+    <p>Leaderboard sourced from <a href="https://speedrun.com/smoce#Damageless">Speedrun.com</a></p>
+    <table class="categoryBoard centerHoriz">
+        <tr>
+            <td>Place</td>
+            <td>Player</td>
+            <td>Moon Count</td>
+            <td>Time</td>
+            <td>Version</td>
+            <td>Date</td>
+        </tr>
+        {% for x in return_list %}
+        <tr>
+            <td>{{ x["place"] }}.</td>
+            <td>{{ x["player_name"] }}</td>
+            <td><a href='{{ x["video"] }}'>{{ x["moons"] }}</a></td>
+            <td>{{ x["time"] }}</td>
+            <td>{{ x["version"] }}</td>
+            <td>{{ x["date"] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+    <p>Website made by <a href="https://twitter.com/aMinibeast">Minibeast</a>, HTML/CSS sourced from <a href="https://github.com/ZacharyTalis">ZacharyTalis</a></p>
+</body>
+
+</html>
