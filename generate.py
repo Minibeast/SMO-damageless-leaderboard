@@ -30,10 +30,12 @@ def main():
                 run = y["run"]
                 break
 
-        time = datetime.timedelta(seconds=run["times"]["primary_t"])
-
-        seconds = time.total_seconds()
-        moon_count = seconds / 3600
+        moon_count = "000"
+        milliseconds = str(run["times"]["primary_t"]).split(".")
+        if len(milliseconds) > 1:
+            moon_count = milliseconds[1]
+            while len(moon_count) < 3:
+                moon_count += "0"
 
         run_obj["moons"] = str(int(moon_count)).zfill(3)
         run_obj["video"] = run["weblink"]
@@ -64,10 +66,12 @@ def main():
             "date": x["run"]["date"]
         }
 
-        time = datetime.timedelta(seconds=x["run"]["times"]["primary_t"])
-
-        seconds = time.total_seconds()
-        moon_count = seconds / 3600
+        moon_count = "000"
+        milliseconds = str(x["run"]["times"]["primary_t"]).split(".")
+        if len(milliseconds) > 1:
+            moon_count = milliseconds[1]
+            while len(moon_count) < 3:
+                moon_count += "0"
 
         run_obj["moons"] = str(int(moon_count)).zfill(3)
 
